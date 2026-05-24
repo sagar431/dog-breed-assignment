@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+uv.lock
 
 data/*
 logs/*
@@ -15,4 +16,3 @@ predictions/*
 
 .kaggle/
 kaggle.json
-
