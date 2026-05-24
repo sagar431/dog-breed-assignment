@@ -1,0 +1,27 @@
+{
+  "name": "Dog Breed Assignment",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace/assignment",
+  "mounts": [
+    "source=${localWorkspaceFolder}/data,target=/workspace/assignment/data,type=bind",
+    "source=${localWorkspaceFolder}/logs,target=/workspace/assignment/logs,type=bind",
+    "source=${localWorkspaceFolder}/samples,target=/workspace/assignment/samples,type=bind",
+    "source=${localWorkspaceFolder}/predictions,target=/workspace/assignment/predictions,type=bind"
+  ],
+  "containerEnv": {
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter"
+      ]
+    }
+  }
+}
+
